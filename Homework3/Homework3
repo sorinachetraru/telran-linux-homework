@@ -1,0 +1,24 @@
+# 2 Создайте папку с вашим именем по пути /tmp/hw3/newfile
+mkdir -p /tmp/hw3/newfile/Sorina
+cd /tmp/hw3/newfile/Sorina
+touch Linux
+# 1 Запишите в новый файл дату.
+date >> Linux
+# 3 Допишите в файл, созданный ранее слова “Homework 3”
+echo "Homework 3" >> Linux
+# 4 Допишите в этот файл информацию о занятом пространстве на 
+# корневом разделе файловой системы (/)
+cat /proc/meminfo >> Linux
+# 5 Допишите в файл пять последних команд из истории команд. 
+# Bug: Argument "5" is ignored (Works in Terminal on Mac)
+history 5 >> Linux
+# 6 Допишите в файл информацию о процессоре (/proc/cpuinfo), но отсортируйте информацию 
+# о процессоре так, чтобы остался только производитель (vendor).
+cat /proc/cpuinfo | grep vendor >> Linux
+# 7 В текстовом редакторе удалите все лишнее, чтобы остался только сам вендор (например 
+# GenuineIntel или AuthenticX86)
+nano Linux
+# edit file
+# ctrl+x
+# Y
+# enter
